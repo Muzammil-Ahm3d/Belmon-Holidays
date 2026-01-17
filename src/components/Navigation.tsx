@@ -1,50 +1,38 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'Home', anchor: '#home' },
-  { name: 'About', anchor: '#about' },
-  { name: 'Services', anchor: '#services' },
-  { name: 'Packages', anchor: '#packages' },
-  { name: 'Contact', anchor: '#contact' },
-  { name: 'Reviews', anchor: '#reviews' },
-  { name: 'FAQ', anchor: '#faq' },
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Services', path: '/services' },
+  { name: 'Packages', path: '/packages' },
+  { name: 'Contact', path: '/contact' },
+  { name: 'Reviews', path: '/reviews' },
+  { name: 'FAQ', path: '/faq' },
 ];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Update active section based on scroll position
-      const sections = navLinks.map(link => link.anchor.slice(1));
-      for (const section of sections.reverse()) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (anchor: string) => {
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const handleMobileNavClick = () => {
     setIsMobileMenuOpen(false);
-    const element = document.querySelector(anchor);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
@@ -60,25 +48,23 @@ const Navigation = () => {
       >
         <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#home"
-            onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
+          <Link
+            to="/"
             className="flex items-center gap-2"
           >
             <span className="text-2xl md:text-3xl font-serif font-bold tracking-wide">
               <span className={isScrolled ? 'text-foreground' : 'text-card'}>BELMOND</span>
               <span className="text-primary"> HOLIDAYS</span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.anchor}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.anchor); }}
-                  className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 underline-gold ${activeSection === link.anchor.slice(1)
+                <Link
+                  to={link.path}
+                  className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 underline-gold ${isActive(link.path)
                     ? 'text-primary'
                     : isScrolled
                       ? 'text-foreground hover:text-primary'
@@ -86,19 +72,18 @@ const Navigation = () => {
                     }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* CTA Button - Desktop */}
-          <a
-            href="#contact"
-            onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
+          <Link
+            to="/contact"
             className="hidden lg:block btn-gold text-sm py-3 px-6"
           >
             Book Now
-          </a>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -124,31 +109,37 @@ const Navigation = () => {
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.div
                   key={link.name}
-                  href={link.anchor}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.anchor); }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`text-2xl font-serif font-medium tracking-wide transition-colors ${activeSection === link.anchor.slice(1)
-                    ? 'text-primary'
-                    : 'text-foreground hover:text-primary'
-                    }`}
                 >
-                  {link.name}
-                </motion.a>
+                  <Link
+                    to={link.path}
+                    onClick={handleMobileNavClick}
+                    className={`text-2xl font-serif font-medium tracking-wide transition-colors ${isActive(link.path)
+                      ? 'text-primary'
+                      : 'text-foreground hover:text-primary'
+                      }`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
-              <motion.a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="btn-gold mt-4"
+                transition={{ delay: 0.7 }}
               >
-                Book Now
-              </motion.a>
+                <Link
+                  to="/contact"
+                  onClick={handleMobileNavClick}
+                  className="btn-gold mt-4"
+                >
+                  Book Now
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}
@@ -158,3 +149,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

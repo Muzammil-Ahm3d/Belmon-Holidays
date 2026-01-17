@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const faqs = [
     {
@@ -126,16 +127,12 @@ const FAQ = () => {
                         <p className="text-muted-foreground mb-4">
                             Still have questions? We're here to help!
                         </p>
-                        <a
-                            href="#contact"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-                            }}
+                        <Link
+                            to="/contact"
                             className="btn-gold inline-block"
                         >
                             Contact Our Team
-                        </a>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>
