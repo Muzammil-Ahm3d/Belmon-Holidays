@@ -14,8 +14,8 @@ import {
 import { Link } from 'react-router-dom';
 
 // Contact constants
-const WHATSAPP_NUMBER = '+1234567890';
-const PHONE_NUMBER = '+1234567890';
+const WHATSAPP_NUMBER = '+917337025029';
+const PHONE_NUMBER = '+919515797929';
 
 const services = [
   {

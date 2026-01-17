@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:contact@belmondholidays.com"
+                href="mailto:info@belmondholidays.com"
                 className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-primary hover:text-foreground transition-colors"
                 aria-label="Email"
               >
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://wa.me/+1234567890"
+                href="https://wa.me/917337025029"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-primary hover:text-foreground transition-colors"
@@ -91,11 +91,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-card/70">+1-XXX-XXX-XXXX</span>
+                <span className="text-card/70">+91 95157 97929</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-card/70">contact@belmondholidays.com</span>
+                <span className="text-card/70">info@belmondholidays.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5 flex-shrink-0" />

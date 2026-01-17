@@ -43,23 +43,23 @@ const contactInfo = [
   {
     type: "phone",
     label: "Call Us",
-    value: "+1-XXX-XXX-XXXX",
+    value: "+91 95157 97929",
     icon: Phone,
-    action: "tel:+1234567890"
+    action: "tel:+919515797929"
   },
   {
     type: "email",
     label: "Email",
-    value: "contact@belmondholidays.com",
+    value: "info@belmondholidays.com",
     icon: Mail,
-    action: "mailto:contact@belmondholidays.com"
+    action: "mailto:info@belmondholidays.com"
   },
   {
     type: "whatsapp",
     label: "WhatsApp",
-    value: "+1-XXX-XXX-XXXX",
+    value: "+91 73370 25029",
     icon: MessageCircle,
-    action: "https://wa.me/+1234567890"
+    action: "https://wa.me/917337025029"
   },
   {
     type: "address",
