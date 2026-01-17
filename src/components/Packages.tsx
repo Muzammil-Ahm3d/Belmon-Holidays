@@ -144,7 +144,7 @@ const allPackages = [
     region: "Africa",
     experienceType: "Adventure",
     duration: "10 Days / 9 Nights",
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2068&auto=format&fit=crop",
+    image: "/packages/south_africa.png",
     highlights: ["Table Mountain", "Kruger Safari", "Cape Winelands", "Garden Route"],
     included: ["Game Lodges", "Wine Tasting", "Rental Car"]
   },
