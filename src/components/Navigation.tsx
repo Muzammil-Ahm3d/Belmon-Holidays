@@ -18,6 +18,10 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Only show transparent header on home page
+  const isHomePage = location.pathname === '/';
+  const showSolidHeader = !isHomePage || isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -41,7 +45,7 @@ const Navigation = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidHeader
           ? 'bg-background/95 backdrop-blur-md shadow-elegant border-b border-border'
           : 'bg-transparent'
           }`}
@@ -53,7 +57,7 @@ const Navigation = () => {
             className="flex items-center gap-2"
           >
             <span className="text-2xl md:text-3xl font-serif font-bold tracking-wide">
-              <span className={isScrolled ? 'text-foreground' : 'text-card'}>BELMOND</span>
+              <span className={showSolidHeader ? 'text-foreground' : 'text-card'}>BELMOND</span>
               <span className="text-primary"> HOLIDAYS</span>
             </span>
           </Link>
@@ -66,7 +70,7 @@ const Navigation = () => {
                   to={link.path}
                   className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 underline-gold ${isActive(link.path)
                     ? 'text-primary'
-                    : isScrolled
+                    : showSolidHeader
                       ? 'text-foreground hover:text-primary'
                       : 'text-card hover:text-primary'
                     }`}
@@ -88,7 +92,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 transition-colors ${isScrolled ? 'text-foreground' : 'text-card'
+            className={`lg:hidden p-2 transition-colors ${showSolidHeader ? 'text-foreground' : 'text-card'
               }`}
             aria-label="Toggle menu"
           >
