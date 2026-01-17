@@ -50,6 +50,134 @@ const initialReviews: Review[] = [
     reviewText: "Corporate retreat coordinated flawlessly. The team handled logistics, accommodations, and entertainment without a hitch. Professional, responsive, and genuinely excellent.",
     tripDate: "July 2024",
     customerImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200"
+  },
+  {
+    id: 5,
+    customerName: "Emily Chen",
+    destination: "Japan Cultural Luxury",
+    rating: 5,
+    reviewText: "An unforgettable journey through Kyoto and Tokyo. The tea ceremonies and private temple visits were exclusive experiences we couldn't have found elsewhere.",
+    tripDate: "November 2024"
+  },
+  {
+    id: 6,
+    customerName: "Michael Thompson",
+    destination: "South Africa Explorer",
+    rating: 5,
+    reviewText: "Seeing the Big Five was a dream come true. The lodges were spectacular and the guides were incredibly knowledgeable. Highly recommended!",
+    tripDate: "June 2024"
+  },
+  {
+    id: 7,
+    customerName: "Sophie Dubois",
+    destination: "Paris Romance Sojourn",
+    rating: 5,
+    reviewText: "A magical anniversary trip. The dinner cruise on the Seine and the private tour of the Louvre were highlights. Thank you for making it so special.",
+    tripDate: "May 2024"
+  },
+  {
+    id: 8,
+    customerName: "Rajesh Gupta",
+    destination: "Singapore City & Sentosa",
+    rating: 5,
+    reviewText: "Perfect mix of city excitement and island relaxation. The itinerary was well-paced and family-friendly.",
+    tripDate: "December 2024"
+  },
+  {
+    id: 9,
+    customerName: "Elena Rodriguez",
+    destination: "Spain & Portugal Discovery",
+    rating: 5,
+    reviewText: "The food, the culture, the architecture! Everything was amazing. The hotels were centrally located and very luxurious.",
+    tripDate: "April 2024"
+  },
+  {
+    id: 10,
+    customerName: "William Turner",
+    destination: "New Zealand Nature",
+    rating: 5,
+    reviewText: "Breathtaking landscapes. The helicopter tour over Milford Sound was the best experience of my life. Flawless organization.",
+    tripDate: "March 2024"
+  },
+  {
+    id: 11,
+    customerName: "Fatima Al-Sayed",
+    destination: "Turkey Grand Tour",
+    rating: 5,
+    reviewText: "Cappadocia balloon ride was magical. Istanbul's history came alive with our guide. A truly premium experience.",
+    tripDate: "October 2024"
+  },
+  {
+    id: 12,
+    customerName: "Oliver Brown",
+    destination: "Vietnam Cultural Journey",
+    rating: 5,
+    reviewText: "From Ha Long Bay to Hoi An, every stop was unique. The food tours were incredible. Great value for luxury service.",
+    tripDate: "February 2024"
+  },
+  {
+    id: 13,
+    customerName: "Amanda Lee",
+    destination: "Thailand Island Hopper",
+    rating: 5,
+    reviewText: "Phuket and Krabi were paradise. Returns transfers and speedboat tours were handled perfectly. Zero stress, 100% relaxation.",
+    tripDate: "January 2025"
+  },
+  {
+    id: 14,
+    customerName: "Thomas Mueller",
+    destination: "Kenya Wildlife Safari",
+    rating: 5,
+    reviewText: "The migration was spectacular. We felt very safe and cared for. The glamping tents were more luxurious than many hotels!",
+    tripDate: "August 2024"
+  },
+  {
+    id: 15,
+    customerName: "Isabella Martinez",
+    destination: "Italy Classics",
+    rating: 5,
+    reviewText: "Venice, Florence, Rome - the classic trio done right. Private transfers made moving between cities a breeze.",
+    tripDate: "July 2024"
+  },
+  {
+    id: 16,
+    customerName: "David Kim",
+    destination: "Australia Highlights",
+    rating: 5,
+    reviewText: "Sydney Opera House tour and the Great Barrier Reef diving were top notch. A big trip handled with ease.",
+    tripDate: "November 2024"
+  },
+  {
+    id: 17,
+    customerName: "Sarah Johnson",
+    destination: "Greece Island Hopping",
+    rating: 5,
+    reviewText: "Santorini sunsets and Mykonos beaches. The boutique hotels selected for us were charming and high-end.",
+    tripDate: "June 2024"
+  },
+  {
+    id: 18,
+    customerName: "Ahmed Khan",
+    destination: "Dubai Luxury & Desert",
+    rating: 4,
+    reviewText: "Great experience overall. The desert safari dinner was the highlight. Would use Belmond again.",
+    tripDate: "May 2024"
+  },
+  {
+    id: 19,
+    customerName: "Jennifer Wu",
+    destination: "London & Scottish Highlands",
+    rating: 5,
+    reviewText: "Castles, trains, and misty mountains. A customized itinerary that fit our pace perfectly.",
+    tripDate: "September 2024"
+  },
+  {
+    id: 20,
+    customerName: "Robert Davis",
+    destination: "Cambodia Temple Run",
+    rating: 5,
+    reviewText: "Angkor Wat at sunrise was spiritual. Our guide knew the best spots to avoid crowds. deeply appreciated.",
+    tripDate: "December 2024"
   }
 ];
 
@@ -346,8 +474,8 @@ const Reviews = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
-                    ? 'bg-primary scale-125'
-                    : 'bg-muted hover:bg-primary/50'
+                  ? 'bg-primary scale-125'
+                  : 'bg-muted hover:bg-primary/50'
                   }`}
                 aria-label={`Go to review ${index + 1}`}
               />
