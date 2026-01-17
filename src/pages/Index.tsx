@@ -18,7 +18,7 @@ const Index = () => {
         <Hero />
         <About />
         <Services limit={3} />
-        <Packages limit={4} />
+        <Packages limit={3} />
         <Contact />
         <Reviews />
         <FAQ />

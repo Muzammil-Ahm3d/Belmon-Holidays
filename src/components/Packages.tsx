@@ -339,7 +339,7 @@ const allPackages = [
 ];
 
 // Featured IDs for Home Page
-const FEATURED_IDS = ['asia-1', 'asia-7', 'europe-3', 'asia-3'];
+const FEATURED_IDS = ['asia-1', 'asia-7', 'europe-3'];
 
 const categories = [
   "World",
@@ -420,8 +420,8 @@ const Packages = ({ limit, showFilter = false }: PackagesProps) => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`text-lg md:text-xl font-serif transition-colors duration-300 ${activeCategory === cat
-                    ? "text-primary border-b-2 border-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                  ? "text-primary border-b-2 border-primary"
+                  : "text-muted-foreground hover:text-foreground"
                   }`}
               >
                 {cat}
@@ -495,7 +495,7 @@ const Packages = ({ limit, showFilter = false }: PackagesProps) => {
                   onClick={() => handleCustomize(pkg.name)}
                   className="w-full btn-gold-outline text-sm py-2.5 mt-auto"
                 >
-                  View Details
+                  Customize This Package
                 </button>
               </div>
             </motion.div>
