@@ -42,7 +42,7 @@ const allPackages = [
     region: "Asia",
     experienceType: "Cultural",
     duration: "9 Days / 8 Nights",
-    image: "https://images.unsplash.com/photo-1528127269322-53996db866bd?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Ha Long Bay Cruise", "Hoi An Ancient Town", "Hanoi Food Tour", "Mekong Delta"],
     included: ["Cruise Stay", "Guided Tours", "Domestic Flights"]
   },
@@ -62,7 +62,7 @@ const allPackages = [
     region: "Asia",
     experienceType: "History",
     duration: "5 Days / 4 Nights",
-    image: "https://images.unsplash.com/photo-1565060169194-1dd86df73238?q=80&w=1974&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1561361513-35bdcd2550bb?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Angkor Wat Sunrise", "Ta Prohm", "Phnom Penh", "Local Cuisine"],
     included: ["Boutique Hotel", "Temple Passes", "Expert Guide"]
   },
@@ -236,7 +236,7 @@ const allPackages = [
     region: "Europe",
     experienceType: "History",
     duration: "5 Days / 4 Nights",
-    image: "https://images.unsplash.com/photo-1541849546-216549242520?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1519677100258-a5ca12252a94?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Charles Bridge", "Prague Castle", "Old Town Square", "Vltava River Cruise"],
     included: ["Centrally Located Hotel", "Castle Entry", "Dinner Cruise"]
   },
@@ -246,7 +246,7 @@ const allPackages = [
     region: "Europe",
     experienceType: "Culinary",
     duration: "4 Days / 3 Nights",
-    image: "https://images.unsplash.com/photo-1523665568144-b04b8f395427?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1559410545-0bd9c4a01c13?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Grand Place", "Chocolate Making", "Atomium", "Bruges Day Trip"],
     included: ["Chocolate Workshop", "Train Tickets", "City Card"]
   },

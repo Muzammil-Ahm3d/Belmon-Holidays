@@ -49,9 +49,9 @@ const About = () => {
           >
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop"
-                alt="Luxury travel experience"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                src="/about-intro.png"
+                alt="Belmond Holidays Luxury Collection"
+                className="w-full h-[400px] lg:h-[500px] object-cover p-12 bg-card/50"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
             </div>
