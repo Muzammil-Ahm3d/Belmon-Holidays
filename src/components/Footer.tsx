@@ -13,7 +13,7 @@ const Footer = () => {
               <img
                 src="/footer-logo.png"
                 alt="Belmond Holidays"
-                className="h-16 w-auto object-contain"
+                className="h-28 w-auto object-contain"
               />
             </a>
             <p className="text-card/70 mb-6 leading-relaxed">
