@@ -62,7 +62,7 @@ const allPackages = [
     region: "Asia",
     experienceType: "History",
     duration: "5 Days / 4 Nights",
-    image: "https://images.unsplash.com/photo-1561361513-35bdcd2550bb?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1621245645391-729007e04add?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Angkor Wat Sunrise", "Ta Prohm", "Phnom Penh", "Local Cuisine"],
     included: ["Boutique Hotel", "Temple Passes", "Expert Guide"]
   },
@@ -82,7 +82,7 @@ const allPackages = [
     region: "Asia",
     experienceType: "Urban",
     duration: "5 Days / 4 Nights",
-    image: "https://images.unsplash.com/photo-1506318137071-a8bcbf67cc77?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1536585144400-b60882d92976?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Victoria Peak", "Disneyland", "Night Markets", "Dim Sum Tasting"],
     included: ["City Hotel", "Park Tickets", "MTR Passes"]
   },
@@ -102,7 +102,7 @@ const allPackages = [
     region: "Asia",
     experienceType: "Nature",
     duration: "8 Days / 7 Nights",
-    image: "https://images.unsplash.com/photo-1586616091005-09f19db124f5?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1532468305001-bd08283317c2?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Ella Train Ride", "Sigiriya Rock", "Yala Safari", "Tea Plantations"],
     included: ["Scenic Train", "Safari Jeep", "Heritage Stays"]
   },
@@ -236,7 +236,7 @@ const allPackages = [
     region: "Europe",
     experienceType: "History",
     duration: "5 Days / 4 Nights",
-    image: "https://images.unsplash.com/photo-1519677100258-a5ca12252a94?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1517415844287-3475c404870c?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Charles Bridge", "Prague Castle", "Old Town Square", "Vltava River Cruise"],
     included: ["Centrally Located Hotel", "Castle Entry", "Dinner Cruise"]
   },
@@ -246,7 +246,7 @@ const allPackages = [
     region: "Europe",
     experienceType: "Culinary",
     duration: "4 Days / 3 Nights",
-    image: "https://images.unsplash.com/photo-1559410545-0bd9c4a01c13?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1579207036329-87a7407a5146?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Grand Place", "Chocolate Making", "Atomium", "Bruges Day Trip"],
     included: ["Chocolate Workshop", "Train Tickets", "City Card"]
   },
@@ -258,7 +258,7 @@ const allPackages = [
     region: "Australia",
     experienceType: "Adventure",
     duration: "10 Days / 9 Nights",
-    image: "https://images.unsplash.com/photo-1523482580672-01e6f2eb60b3?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Sydney Opera House", "Great Barrier Reef", "Uluru Sunset", "Melbourne Laneways"],
     included: ["Internal Flights", "Reef Cruise", "City Tours"]
   },
@@ -268,7 +268,7 @@ const allPackages = [
     region: "Australia", // Grouping with Australia region
     experienceType: "Nature",
     duration: "12 Days / 11 Nights",
-    image: "https://images.unsplash.com/photo-1469521669194-babb45f83544?q=80&w=2079&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1507699622177-f88835d034ee?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Milford Sound", "Hobbiton Movie Set", "Queenstown Adventure", "Rotorua Geothermal"],
     included: ["Car Rental", "Cruise Tickets", "Maori Experience"]
   },
@@ -280,7 +280,7 @@ const allPackages = [
     region: "India",
     experienceType: "Beach",
     duration: "6 Days / 5 Nights",
-    image: "https://images.unsplash.com/photo-1589136777351-943ca7543748?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=2000&auto=format&fit=crop",
     highlights: ["Havelock Island", "Radhanagar Beach", "Scuba Diving", "Cellular Jail"],
     included: ["Ferry Tickets", "Resort Stay", "Water Sports"]
   },
