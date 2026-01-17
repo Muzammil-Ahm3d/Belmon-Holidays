@@ -14,7 +14,7 @@ const PackagesPage = () => {
             <Navigation />
             <FloatingContact />
             <main className="pt-20">
-                <Packages />
+                <Packages showFilter={true} />
             </main>
             <Footer />
         </div>
