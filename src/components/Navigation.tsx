@@ -54,13 +54,8 @@ const Navigation = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-3"
+            className="flex items-center gap-2"
           >
-            <img
-              src="/logo.png"
-              alt="Belmond Holidays Logo"
-              className="h-12 w-auto object-contain"
-            />
             <span className="text-2xl md:text-3xl font-serif font-bold tracking-wide">
               <span className={showSolidHeader ? 'text-foreground' : 'text-card'}>BELMOND</span>
               <span className="text-primary"> HOLIDAYS</span>
