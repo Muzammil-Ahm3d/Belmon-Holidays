@@ -178,6 +178,126 @@ const initialReviews: Review[] = [
     rating: 5,
     reviewText: "Angkor Wat at sunrise was spiritual. Our guide knew the best spots to avoid crowds. deeply appreciated.",
     tripDate: "December 2024"
+  },
+  {
+    id: 21,
+    customerName: "Elizabeth Sterling",
+    destination: "Antarctica Expedition",
+    rating: 5,
+    reviewText: "Visiting the White Continent was a life-changing experience. The expedition team was top-tier, and the wildlife encounters were beyond imagination.",
+    tripDate: "January 2024"
+  },
+  {
+    id: 22,
+    customerName: "Jonathan Hayes",
+    destination: "Patagonia Adventure",
+    rating: 5,
+    reviewText: "Hiking the W Trek in style. The logistics were flawless, and the luxury yurts provided the perfect comfort after challenging days.",
+    tripDate: "December 2023"
+  },
+  {
+    id: 23,
+    customerName: "Amelia Courtenay",
+    destination: "Amalfi Coast & Capri",
+    rating: 5,
+    reviewText: "La Dolce Vita indeed! The private boat tour around Capri and the cooking class in Positano were absolute highlights.",
+    tripDate: "June 2024"
+  },
+  {
+    id: 24,
+    customerName: "Hiroshi Tanaka",
+    destination: "Canadian Rockies",
+    rating: 5,
+    reviewText: "The Rocky Mountaineer train journey was spectacular. Banff and Jasper were winter wonderlands. Exceptional service throughout.",
+    tripDate: "February 2024"
+  },
+  {
+    id: 25,
+    customerName: "Maria Garcia",
+    destination: "Peru & Machu Picchu",
+    rating: 5,
+    reviewText: "The Vistadome train to Machu Picchu was magical. Our guide's knowledge of Incan history added so much depth to the trip.",
+    tripDate: "May 2024"
+  },
+  {
+    id: 26,
+    customerName: "Arthur Pendelton",
+    destination: "Scottish Highlands",
+    rating: 5,
+    reviewText: "A whisky tasting tour like no other. The private chauffeur made the winding roads a breeze. Slàinte Mhath!",
+    tripDate: "September 2023"
+  },
+  {
+    id: 27,
+    customerName: "Liu Wei",
+    destination: "Iceland Northern Lights",
+    rating: 5,
+    reviewText: "We saw the Aurora Borealis! The super jeep tour and the Blue Lagoon retreat were perfectly organized.",
+    tripDate: "November 2023"
+  },
+  {
+    id: 28,
+    customerName: "Catherine Deneuve",
+    destination: "Morocco Imperial Cities",
+    rating: 5,
+    reviewText: "From the souks of Marrakech to the Sahara dunes, every moment was vibrant. The riads we stayed in were architectural gems.",
+    tripDate: "March 2024"
+  },
+  {
+    id: 29,
+    customerName: "Robert Redford",
+    destination: "Costa Rica Eco-Luxe",
+    rating: 5,
+    reviewText: "Pura Vida! The biodiversity is astounding. Staying in a luxury treehouse was a childhood dream come true.",
+    tripDate: "April 2024"
+  },
+  {
+    id: 30,
+    customerName: "Samuel Jackson",
+    destination: "Tanzania Safari",
+    rating: 5,
+    reviewText: "The Serengeti never disappoints. We saw a lion hunt! The tented camps were incredibly comfortable.",
+    tripDate: "August 2023"
+  },
+  {
+    id: 31,
+    customerName: "Grace Kelly",
+    destination: "French Riviera",
+    rating: 5,
+    reviewText: "Monaco, Nice, and Cannes. A trip of pure elegance. The restaurant reservations were spot on.",
+    tripDate: "July 2024"
+  },
+  {
+    id: 32,
+    customerName: "Lars Jensen",
+    destination: "Norway Fjords",
+    rating: 5,
+    reviewText: "Cruising the fjords was majestic. The silence and beauty of nature were overwhelming. Excellent itinerary.",
+    tripDate: "June 2024"
+  },
+  {
+    id: 33,
+    customerName: "Aisling O'Connor",
+    destination: "Ireland Castles",
+    rating: 5,
+    reviewText: "Staying in Ashford Castle was a fairytale. The falconry experience was unique and very memorable.",
+    tripDate: "October 2023"
+  },
+  {
+    id: 34,
+    customerName: "Chen Xinyi",
+    destination: "Bhutan Kingdom",
+    rating: 5,
+    reviewText: "The hike to Tiger's Nest was spiritual. Bhutan's happiness is contagious. A truly peaceful journey.",
+    tripDate: "April 2024"
+  },
+  {
+    id: 35,
+    customerName: "Felipe Massa",
+    destination: "Brazil & Amazon",
+    rating: 5,
+    reviewText: "Rio was electric and the Amazon lodge was immersive. A perfect blend of city energy and nature's calm.",
+    tripDate: "February 2024"
   }
 ];
 
