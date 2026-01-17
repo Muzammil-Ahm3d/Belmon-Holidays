@@ -1,14 +1,16 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  Plane, 
-  FileText, 
-  Building2, 
-  Gift, 
-  Calendar, 
-  Car, 
-  Crown 
+import {
+  Plane,
+  FileText,
+  Building2,
+  Gift,
+  Calendar,
+  Car,
+  Crown,
+  ArrowRight
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -104,9 +106,16 @@ const services = [
   }
 ];
 
-const Services = () => {
+interface ServicesProps {
+  limit?: number;
+}
+
+const Services = ({ limit }: ServicesProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const displayedServices = limit ? services.slice(0, limit) : services;
+  const hasMore = limit && limit < services.length;
 
   return (
     <section id="services" className="section-padding bg-muted">
@@ -133,7 +142,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => (
+          {displayedServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
@@ -173,9 +182,28 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* View More Button */}
+        {hasMore && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mt-12"
+          >
+            <Link
+              to="/services"
+              className="btn-gold inline-flex items-center gap-2"
+            >
+              View All Services
+              <ArrowRight size={18} />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );
 };
 
 export default Services;
+

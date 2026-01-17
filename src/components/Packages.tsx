@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Clock, Check } from 'lucide-react';
+import { Clock, Check, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const packages = [
   {
@@ -137,9 +138,16 @@ const packages = [
   }
 ];
 
-const Packages = () => {
+interface PackagesProps {
+  limit?: number;
+}
+
+const Packages = ({ limit }: PackagesProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const displayedPackages = limit ? packages.slice(0, limit) : packages;
+  const hasMore = limit && limit < packages.length;
 
   const handleCustomize = (packageName: string) => {
     const contactSection = document.getElementById('contact');
@@ -175,7 +183,7 @@ const Packages = () => {
 
         {/* Packages Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {packages.map((pkg, index) => (
+          {displayedPackages.map((pkg, index) => (
             <motion.div
               key={pkg.id}
               initial={{ opacity: 0, y: 30 }}
@@ -191,7 +199,7 @@ const Packages = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
-                
+
                 {/* Badges */}
                 <div className="absolute top-4 left-4 flex gap-2">
                   <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
@@ -262,6 +270,24 @@ const Packages = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* View More Button */}
+        {hasMore && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mt-12"
+          >
+            <Link
+              to="/packages"
+              className="btn-gold inline-flex items-center gap-2"
+            >
+              View All Packages
+              <ArrowRight size={18} />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );
