@@ -325,7 +325,10 @@ const Reviews = () => {
 
   const [reviews, setReviews] = useState<Review[]>(() => {
     const saved = localStorage.getItem('belmond-reviews');
-    return saved ? JSON.parse(saved) : initialReviews;
+    // Filter out any saved reviews that match static IDs (1-1000) to ensure we always use the latest initialReviews
+    // User reviews use Date.now() which is > 1000
+    const userReviews = saved ? JSON.parse(saved).filter((r: Review) => r.id > 1000) : [];
+    return [...userReviews, ...initialReviews];
   });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -344,9 +347,10 @@ const Reviews = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // Save reviews to localStorage
+  // Save ONLY user reviews to localStorage
   useEffect(() => {
-    localStorage.setItem('belmond-reviews', JSON.stringify(reviews));
+    const userReviews = reviews.filter(r => r.id > 1000);
+    localStorage.setItem('belmond-reviews', JSON.stringify(userReviews));
   }, [reviews]);
 
   // Auto-advance carousel
