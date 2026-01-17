@@ -63,8 +63,15 @@ const contactInfo = [
   },
   {
     type: "address",
-    label: "Office Location",
-    value: "123 Luxury Boulevard, Travel District, Global City 12345",
+    label: "Head Office",
+    value: "# 1-5-4/5/A, New Maruthi Nagar, Kothapet, Hyderabad. TS. India.",
+    icon: MapPin,
+    action: "#"
+  },
+  {
+    type: "address",
+    label: "Branch Office",
+    value: "Flat No: 211, Jubilee Hills, Near Road No 05 Metro station, Hyderabad, TS, India",
     icon: MapPin,
     action: "#"
   }

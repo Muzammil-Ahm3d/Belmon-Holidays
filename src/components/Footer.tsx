@@ -99,9 +99,21 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-card/70">
-                  123 Luxury Boulevard, Travel District, Global City 12345
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-card/90 font-medium text-xs uppercase tracking-wider mb-1">Head Office</span>
+                  <span className="text-card/70 text-sm">
+                    # 1-5-4/5/A, New Maruthi Nagar, Kothapet, Hyderabad. TS. India.
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col">
+                  <span className="text-card/90 font-medium text-xs uppercase tracking-wider mb-1">Branch Office</span>
+                  <span className="text-card/70 text-sm">
+                    Flat No: 211, Jubilee Hills, Near Road No 05 Metro station, Hyderabad, TS, India
+                  </span>
+                </div>
               </li>
             </ul>
           </div>
