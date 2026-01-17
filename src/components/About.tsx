@@ -51,7 +51,7 @@ const About = () => {
               <img
                 src="/about-intro.png"
                 alt="Belmond Holidays Luxury Collection"
-                className="w-full h-[400px] lg:h-[500px] object-cover p-12 bg-card/50"
+                className="w-full h-auto object-contain rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
             </div>
