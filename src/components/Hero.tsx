@@ -30,7 +30,7 @@ const Hero = () => {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2068&auto=format&fit=crop')`,
@@ -59,7 +59,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-card mb-6 leading-tight"
         >
-          BELMON{' '}
+          BELMOND{' '}
           <span className="text-primary">HOLIDAYS</span>
         </motion.h1>
 

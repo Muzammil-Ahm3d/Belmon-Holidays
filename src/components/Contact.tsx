@@ -75,9 +75,9 @@ const contactInfo = [
   {
     type: "email",
     label: "Email",
-    value: "contact@belmonholidays.com",
+    value: "contact@belmondholidays.com",
     icon: Mail,
-    action: "mailto:contact@belmonholidays.com"
+    action: "mailto:contact@belmondholidays.com"
   },
   {
     type: "whatsapp",
@@ -154,16 +154,16 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     setIsSubmitting(false);
-    
+
     // Reset form
     setFormData({
       fullName: '',
@@ -230,9 +230,8 @@ const Contact = () => {
                     type="text"
                     value={formData.fullName}
                     onChange={(e) => setFormData(prev => ({ ...prev, fullName: e.target.value }))}
-                    className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                      errors.fullName ? 'border-destructive' : 'border-border'
-                    }`}
+                    className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.fullName ? 'border-destructive' : 'border-border'
+                      }`}
                     placeholder="John Doe"
                   />
                   {errors.fullName && (
@@ -249,9 +248,8 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                      errors.email ? 'border-destructive' : 'border-border'
-                    }`}
+                    className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.email ? 'border-destructive' : 'border-border'
+                      }`}
                     placeholder="john@example.com"
                   />
                   {errors.email && (
@@ -270,9 +268,8 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                    className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                      errors.phone ? 'border-destructive' : 'border-border'
-                    }`}
+                    className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.phone ? 'border-destructive' : 'border-border'
+                      }`}
                     placeholder="+1 (555) 123-4567"
                   />
                   {errors.phone && (
@@ -309,11 +306,10 @@ const Contact = () => {
                       key={service}
                       type="button"
                       onClick={() => handleServiceToggle(service)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                        formData.services.includes(service)
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${formData.services.includes(service)
                           ? 'bg-primary text-primary-foreground'
                           : 'bg-muted text-foreground hover:bg-primary/20'
-                      }`}
+                        }`}
                     >
                       {service}
                     </button>
@@ -362,9 +358,8 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                   rows={5}
-                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none ${
-                    errors.message ? 'border-destructive' : 'border-border'
-                  }`}
+                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none ${errors.message ? 'border-destructive' : 'border-border'
+                    }`}
                   placeholder="Tell us about your travel dreams, budget expectations, or specific requirements..."
                 />
                 {errors.message && (

@@ -20,7 +20,7 @@ const initialReviews: Review[] = [
     customerName: "Sarah Mitchell",
     destination: "Maldives Paradise Escape",
     rating: 5,
-    reviewText: "BELMON HOLIDAYS transformed our honeymoon into a fairy tale. Every detail was perfect, from the moment we landed to our final sunset. The team's attention to detail was extraordinary!",
+    reviewText: "BELMOND HOLIDAYS transformed our honeymoon into a fairy tale. Every detail was perfect, from the moment we landed to our final sunset. The team's attention to detail was extraordinary!",
     tripDate: "October 2024",
     customerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200"
   },
@@ -29,7 +29,7 @@ const initialReviews: Review[] = [
     customerName: "James Patterson",
     destination: "Swiss Alps Luxury Retreat",
     rating: 5,
-    reviewText: "Our family trip was seamless. The private guides, gourmet dinners, and personalized itinerary exceeded all expectations. BELMON HOLIDAYS is the gold standard in luxury travel.",
+    reviewText: "Our family trip was seamless. The private guides, gourmet dinners, and personalized itinerary exceeded all expectations. BELMOND HOLIDAYS is the gold standard in luxury travel.",
     tripDate: "September 2024",
     customerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
   },
@@ -38,7 +38,7 @@ const initialReviews: Review[] = [
     customerName: "Priya Sharma",
     destination: "Bali Luxury Wellness",
     rating: 5,
-    reviewText: "The wellness retreat was rejuvenating. From yoga sessions to traditional spa treatments, everything was curated perfectly. I've already recommended BELMON to all my friends!",
+    reviewText: "The wellness retreat was rejuvenating. From yoga sessions to traditional spa treatments, everything was curated perfectly. I've already recommended BELMOND to all my friends!",
     tripDate: "August 2024",
     customerImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200"
   },
@@ -76,7 +76,7 @@ const Reviews = () => {
   const { toast } = useToast();
 
   const [reviews, setReviews] = useState<Review[]>(() => {
-    const saved = localStorage.getItem('belmon-reviews');
+    const saved = localStorage.getItem('belmond-reviews');
     return saved ? JSON.parse(saved) : initialReviews;
   });
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -98,7 +98,7 @@ const Reviews = () => {
 
   // Save reviews to localStorage
   useEffect(() => {
-    localStorage.setItem('belmon-reviews', JSON.stringify(reviews));
+    localStorage.setItem('belmond-reviews', JSON.stringify(reviews));
   }, [reviews]);
 
   // Auto-advance carousel
@@ -345,11 +345,10 @@ const Reviews = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex
+                className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
                     ? 'bg-primary scale-125'
                     : 'bg-muted hover:bg-primary/50'
-                }`}
+                  }`}
                 aria-label={`Go to review ${index + 1}`}
               />
             ))}
@@ -368,7 +367,7 @@ const Reviews = () => {
               Share Your Experience
             </h3>
             <p className="text-muted-foreground">
-              Let us know about your BELMON HOLIDAYS journey
+              Let us know about your BELMOND HOLIDAYS journey
             </p>
           </div>
 
@@ -386,9 +385,8 @@ const Reviews = () => {
                   type="text"
                   value={formData.customerName}
                   onChange={(e) => setFormData(prev => ({ ...prev, customerName: e.target.value }))}
-                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                    errors.customerName ? 'border-destructive' : 'border-border'
-                  }`}
+                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.customerName ? 'border-destructive' : 'border-border'
+                    }`}
                   placeholder="John Doe"
                 />
                 {errors.customerName && (
@@ -405,9 +403,8 @@ const Reviews = () => {
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                    errors.email ? 'border-destructive' : 'border-border'
-                  }`}
+                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.email ? 'border-destructive' : 'border-border'
+                    }`}
                   placeholder="john@example.com"
                 />
                 {errors.email && (
@@ -425,9 +422,8 @@ const Reviews = () => {
                 <select
                   value={formData.destination}
                   onChange={(e) => setFormData(prev => ({ ...prev, destination: e.target.value }))}
-                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                    errors.destination ? 'border-destructive' : 'border-border'
-                  }`}
+                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.destination ? 'border-destructive' : 'border-border'
+                    }`}
                 >
                   <option value="">Select a destination</option>
                   {destinations.map(dest => (
@@ -450,9 +446,8 @@ const Reviews = () => {
                     type="date"
                     value={formData.tripDate}
                     onChange={(e) => setFormData(prev => ({ ...prev, tripDate: e.target.value }))}
-                    className={`w-full pl-12 pr-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${
-                      errors.tripDate ? 'border-destructive' : 'border-border'
-                    }`}
+                    className={`w-full pl-12 pr-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all ${errors.tripDate ? 'border-destructive' : 'border-border'
+                      }`}
                   />
                 </div>
                 {errors.tripDate && (
@@ -496,9 +491,8 @@ const Reviews = () => {
                 onChange={(e) => setFormData(prev => ({ ...prev, reviewText: e.target.value }))}
                 rows={4}
                 maxLength={300}
-                className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none ${
-                  errors.reviewText ? 'border-destructive' : 'border-border'
-                }`}
+                className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none ${errors.reviewText ? 'border-destructive' : 'border-border'
+                  }`}
                 placeholder="Share your experience in 50-300 characters..."
               />
               <div className="flex justify-between items-center mt-1">
@@ -561,7 +555,7 @@ const Reviews = () => {
                   className="mt-1 w-5 h-5 rounded border-border accent-primary"
                 />
                 <span className="text-sm text-muted-foreground">
-                  I consent to display my review and name on BELMON HOLIDAYS website *
+                  I consent to display my review and name on BELMOND HOLIDAYS website *
                 </span>
               </label>
               {errors.consent && (

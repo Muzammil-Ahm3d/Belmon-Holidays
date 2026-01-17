@@ -10,21 +10,21 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-serif text-3xl font-bold mb-4">
-              BELMON <span className="text-primary">HOLIDAYS</span>
+              BELMOND <span className="text-primary">HOLIDAYS</span>
             </h3>
             <p className="text-card/70 mb-6 leading-relaxed">
               Your trusted partner in crafting unforgettable luxury travel experiences. Dream destinations, curated just for you.
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:contact@belmonholidays.com"
+                href="mailto:contact@belmondholidays.com"
                 className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-primary hover:text-foreground transition-colors"
                 aria-label="Email"
               >
                 <Mail size={18} />
               </a>
               <a
-                href="https://instagram.com/belmonholidays"
+                href="https://instagram.com/belmondholidays"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-primary hover:text-foreground transition-colors"
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-card/70">contact@belmonholidays.com</span>
+                <span className="text-card/70">contact@belmondholidays.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5 flex-shrink-0" />
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-card/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-card/60 text-sm">
-            © {currentYear} BELMON HOLIDAYS. All rights reserved.
+            © {currentYear} BELMOND HOLIDAYS. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-card/60 hover:text-primary transition-colors">

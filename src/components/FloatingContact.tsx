@@ -24,7 +24,7 @@ const contactOptions = [
     {
         id: 'email',
         icon: Mail,
-        link: 'mailto:contact@belmonholidays.com',
+        link: 'mailto:contact@belmondholidays.com',
         tooltip: 'Email Us',
         bgColor: 'bg-amber-500 hover:bg-amber-600',
     },
@@ -84,8 +84,8 @@ const FloatingContact = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
                 className={`flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-all duration-300 ${isOpen
-                        ? 'bg-red-500 hover:bg-red-600'
-                        : 'bg-primary hover:bg-primary/90'
+                    ? 'bg-red-500 hover:bg-red-600'
+                    : 'bg-primary hover:bg-primary/90'
                     }`}
                 aria-label={isOpen ? 'Close contact options' : 'Open contact options'}
             >

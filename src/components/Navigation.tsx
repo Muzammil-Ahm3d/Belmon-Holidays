@@ -52,11 +52,10 @@ const Navigation = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? 'bg-background/95 backdrop-blur-md shadow-elegant border-b border-border'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
@@ -66,7 +65,7 @@ const Navigation = () => {
             className="flex items-center gap-2"
           >
             <span className="text-2xl md:text-3xl font-serif font-bold tracking-wide">
-              <span className={isScrolled ? 'text-foreground' : 'text-card'}>BELMON</span>
+              <span className={isScrolled ? 'text-foreground' : 'text-card'}>BELMOND</span>
               <span className="text-primary"> HOLIDAYS</span>
             </span>
           </a>
@@ -78,13 +77,12 @@ const Navigation = () => {
                 <a
                   href={link.anchor}
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.anchor); }}
-                  className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 underline-gold ${
-                    activeSection === link.anchor.slice(1)
+                  className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 underline-gold ${activeSection === link.anchor.slice(1)
                       ? 'text-primary'
                       : isScrolled
                         ? 'text-foreground hover:text-primary'
                         : 'text-card hover:text-primary'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </a>
@@ -104,9 +102,8 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 transition-colors ${
-              isScrolled ? 'text-foreground' : 'text-card'
-            }`}
+            className={`lg:hidden p-2 transition-colors ${isScrolled ? 'text-foreground' : 'text-card'
+              }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -133,11 +130,10 @@ const Navigation = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`text-2xl font-serif font-medium tracking-wide transition-colors ${
-                    activeSection === link.anchor.slice(1)
+                  className={`text-2xl font-serif font-medium tracking-wide transition-colors ${activeSection === link.anchor.slice(1)
                       ? 'text-primary'
                       : 'text-foreground hover:text-primary'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </motion.a>

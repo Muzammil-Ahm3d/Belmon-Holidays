@@ -33,7 +33,7 @@ const About = () => {
             Our Story
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            About <span className="text-primary">BELMON HOLIDAYS</span>
+            About <span className="text-primary">BELMOND HOLIDAYS</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -72,7 +72,7 @@ const About = () => {
               Your Trusted Partner in Luxury Travel
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              BELMON HOLIDAYS is your trusted partner in crafting unforgettable luxury travel experiences. With expertise in global travel services, we specialize in personalized itineraries, seamless bookings, and world-class customer service that exceeds expectations.
+              BELMOND HOLIDAYS is your trusted partner in crafting unforgettable luxury travel experiences. With expertise in global travel services, we specialize in personalized itineraries, seamless bookings, and world-class customer service that exceeds expectations.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Our team of dedicated travel experts brings over 20 years of combined experience in the luxury travel industry. Every journey is unique. We listen, plan, and execute with precision to ensure your travel dreams become reality.
