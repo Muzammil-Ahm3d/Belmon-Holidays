@@ -56,9 +56,9 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
             </div>
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-elegant border-2 border-primary/20">
-              <p className="text-4xl font-serif font-bold text-primary">20+</p>
-              <p className="text-muted-foreground text-sm">Years of Excellence</p>
+            <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-card p-4 md:p-6 rounded-xl shadow-elegant border-2 border-primary/20 z-10 max-w-[150px] md:max-w-none">
+              <p className="text-2xl md:text-4xl font-serif font-bold text-primary">20+</p>
+              <p className="text-muted-foreground text-xs md:text-sm">Years of Excellence</p>
             </div>
           </motion.div>
 
