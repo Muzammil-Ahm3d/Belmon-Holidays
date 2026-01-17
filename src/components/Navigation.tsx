@@ -57,7 +57,7 @@ const Navigation = () => {
             className="flex items-center gap-3"
           >
             <img
-              src="/logo-v3.png"
+              src="/logo-final.png"
               alt="Belmond Holidays Logo"
               className="h-12 w-auto object-contain"
             />
