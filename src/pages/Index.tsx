@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation';
-import SocialSidebar from '@/components/SocialSidebar';
+import FloatingContact from '@/components/FloatingContact';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <SocialSidebar />
+      <FloatingContact />
       <main>
         <Hero />
         <About />
