@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Phone, Mail, MessageCircle, MapPin, ChevronDown, Send } from 'lucide-react';
+import { Phone, Mail, MessageCircle, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const destinations = [
@@ -37,32 +37,7 @@ const groupSizes = [
   "Large Group (8+)"
 ];
 
-const faqs = [
-  {
-    question: "How do I customize a package?",
-    answer: "Contact our team with your preferences, travel dates, and budget. Our experts will create a bespoke itinerary matching your exact requirements. We offer unlimited customization options."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept credit cards (Visa, Mastercard, Amex), bank transfers, and offer flexible payment plans for larger bookings. Installment options available for packages over $5,000."
-  },
-  {
-    question: "Do you offer travel insurance?",
-    answer: "Yes, we partner with top travel insurance providers to offer comprehensive coverage including trip cancellation, medical, and emergency evacuation. Highly recommended for all bookings."
-  },
-  {
-    question: "What is your cancellation policy?",
-    answer: "Policies vary by package and hotel. Generally, 30+ days = full refund, 15-29 days = 50% refund, <15 days = no refund. Some packages offer flexible cancellation for a small fee."
-  },
-  {
-    question: "Do you provide 24/7 support during travel?",
-    answer: "Absolutely! Our dedicated support team is available 24/7 across multiple time zones. You get a personal travel concierge contact for emergencies and assistance during your trip."
-  },
-  {
-    question: "Can you arrange MICE events?",
-    answer: "Yes, we specialize in corporate meetings, incentive trips, conferences, and events. From venue selection to ground logistics, we handle everything with precision."
-  }
-];
+
 
 const contactInfo = [
   {
@@ -112,7 +87,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
 
   // Check for pre-selected package from Packages section
   useEffect(() => {
@@ -307,8 +282,8 @@ const Contact = () => {
                       type="button"
                       onClick={() => handleServiceToggle(service)}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${formData.services.includes(service)
-                          ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted text-foreground hover:bg-primary/20'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-muted text-foreground hover:bg-primary/20'
                         }`}
                     >
                       {service}
@@ -392,7 +367,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info & FAQ */}
+          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -419,47 +394,6 @@ const Contact = () => {
                       {info.value}
                     </p>
                   </a>
-                ))}
-              </div>
-            </div>
-
-            {/* FAQ Section */}
-            <div>
-              <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">
-                Frequently Asked Questions
-              </h3>
-              <div className="space-y-3">
-                {faqs.map((faq, index) => (
-                  <div
-                    key={index}
-                    className="border border-primary/20 rounded-xl overflow-hidden bg-card"
-                  >
-                    <button
-                      onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                      className="w-full px-5 py-4 flex items-center justify-between text-left"
-                    >
-                      <span className="font-medium text-foreground pr-4">{faq.question}</span>
-                      <motion.span
-                        animate={{ rotate: openFaq === index ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <ChevronDown size={20} className="text-primary flex-shrink-0" />
-                      </motion.span>
-                    </button>
-                    <motion.div
-                      initial={false}
-                      animate={{
-                        height: openFaq === index ? 'auto' : 0,
-                        opacity: openFaq === index ? 1 : 0
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <p className="px-5 pb-4 text-muted-foreground">
-                        {faq.answer}
-                      </p>
-                    </motion.div>
-                  </div>
                 ))}
               </div>
             </div>

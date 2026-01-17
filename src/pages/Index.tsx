@@ -3,9 +3,10 @@ import FloatingContact from '@/components/FloatingContact';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
-import Reviews from '@/components/Reviews';
 import Packages from '@/components/Packages';
 import Contact from '@/components/Contact';
+import Reviews from '@/components/Reviews';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -17,9 +18,10 @@ const Index = () => {
         <Hero />
         <About />
         <Services />
-        <Reviews />
         <Packages />
         <Contact />
+        <Reviews />
+        <FAQ />
       </main>
       <Footer />
     </div>
@@ -27,3 +29,4 @@ const Index = () => {
 };
 
 export default Index;
+
