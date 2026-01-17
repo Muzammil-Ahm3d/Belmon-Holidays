@@ -9,9 +9,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-3xl font-bold mb-4">
-              BELMOND <span className="text-primary">HOLIDAYS</span>
-            </h3>
+            <a href="/" className="inline-block mb-4">
+              <img
+                src="/footer-logo.png"
+                alt="Belmond Holidays"
+                className="h-16 w-auto object-contain"
+              />
+            </a>
             <p className="text-card/70 mb-6 leading-relaxed">
               Your trusted partner in crafting unforgettable luxury travel experiences. Dream destinations, curated just for you.
             </p>
