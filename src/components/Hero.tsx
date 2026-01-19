@@ -30,11 +30,13 @@ const Hero = () => {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2068&auto=format&fit=crop')`,
-          }}
+        <img
+          src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2068&auto=format&fit=crop"
+          alt="Luxury Travel Experience - Belmond Holidays"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          // @ts-ignore - fetchPriority is standard but React types might not include it yet
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/40 to-foreground/70" />
       </motion.div>
