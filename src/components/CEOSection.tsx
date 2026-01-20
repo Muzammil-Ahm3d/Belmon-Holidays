@@ -39,7 +39,7 @@ const CEOSection = () => {
                                 With over <span className="text-primary font-semibold">20 years of distinguished experience</span> in the luxury travel industry, MJNR has held top leadership positions at esteemed organizations throughout Dubai and the Middle East. Our expertise lies in understanding the unique needs of each client and crafting bespoke holiday experiences that exceed expectations.
                             </p>
                             <p>
-                                At BELMOND HOLIDAYS, we connect heart, soul, and mind to every journey we design. We believe that our clients' smiles are our greatest asset, and we strive relentlessly to create those unforgettable moments. <span className="text-primary font-semibold">Luxury and premium service</span> are not just our goals—they are our standards.
+                                At BELMOND HOLIDAYS, we connect heart, soul, and mind to every journey we design. We believe that our clients' smiles are our greatest asset, and we strive relentlessly to create those unforgettable moments. <span className="text-primary font-semibold">Luxury and premium service</span> are not just our goals, they are our standards.
                             </p>
                             <p>
                                 Through strategic partnerships with worldwide management companies, prestigious hotel chains, and specialist tour operators, we deliver unique itineraries and extraordinary experiences that transform travel dreams into reality.
