@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Check } from 'lucide-react';
+import CEOSection from './CEOSection';
 
 const whyChooseUs = [
   "24/7 dedicated support team available in multiple time zones",

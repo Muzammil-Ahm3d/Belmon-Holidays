@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation';
 import FloatingContact from '@/components/FloatingContact';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import CEOSection from '@/components/CEOSection';
 import Services from '@/components/Services';
 import Packages from '@/components/Packages';
 import Contact from '@/components/Contact';
@@ -17,6 +18,7 @@ const Index = () => {
       <main>
         <Hero />
         <About />
+        <CEOSection />
         <Services limit={3} />
         <Packages limit={3} />
         <Contact />
