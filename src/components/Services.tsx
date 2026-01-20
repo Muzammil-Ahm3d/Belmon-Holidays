@@ -8,6 +8,7 @@ import {
   Calendar,
   Car,
   Crown,
+  Ship,
   ArrowRight,
   Phone
 } from 'lucide-react';
@@ -107,6 +108,19 @@ const services = [
       "VIP experience packages",
       "Concierge lifestyle services",
       "Membership benefits"
+    ]
+  },
+  {
+    id: 8,
+    name: "Luxury Cruise Services",
+    icon: Ship,
+    description: "Embark on breathtaking voyages to the world's most captivating destinations. Enjoy unparalleled luxury, entertainment, and adventure at sea.",
+    features: [
+      "World-class cruise lines",
+      "Curated shore excursions",
+      "Premium suite accommodations",
+      "All-inclusive dining & beverages",
+      "Family & couples packages"
     ]
   }
 ];
